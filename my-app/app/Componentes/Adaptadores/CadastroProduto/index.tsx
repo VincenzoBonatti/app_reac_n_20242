@@ -7,6 +7,7 @@ const CadastroProduto = () => {
     let [nome,setNome] = useState("")
     let [descricao,setDescricao] = useState("")
     let [preco,setPreco] = useState(0)
+    let [foto,setFoto] = useState("")
 
     return(
         <View>
@@ -15,6 +16,9 @@ const CadastroProduto = () => {
             
             <Text  >Descrição:</Text>
             <TextInput onChangeText={setDescricao} value={descricao}></TextInput>
+
+            <Text  >Foto:</Text>
+            <TextInput onChangeText={setFoto} value={foto}></TextInput>
 
             <Text  >Preço:</Text>
             <TextInput onChangeText={(v) => 
@@ -31,6 +35,7 @@ const CadastroProduto = () => {
         let produto: Produto = {
             nome: nome,
             descricao: descricao,
+            foto: foto, 
             preco: preco
         } as Produto;
         let api = "https://api-docker-2t8m.onrender.com/api/produtos"
