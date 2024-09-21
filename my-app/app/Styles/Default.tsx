@@ -11,7 +11,8 @@ const Style = StyleSheet.create(
         },
         card:{
             width: 300,
-            height: 200,
+            height: 225,
+            gap: 10,
             backgroundColor: '#aaaaaa',
             borderRadius: 10,
             elevation: 5, // Para Android
